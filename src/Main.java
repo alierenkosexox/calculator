@@ -29,7 +29,7 @@ public class Main {
                     System.out.println("End of Calculator Program");
                 }
                 else  {
-                    System.out.println("Nubmer cannot be divided by zero");
+                    System.out.println("Number cannot be divided by zero");
                 }
                      {
                 System.out.println("Operatipon rejected");
