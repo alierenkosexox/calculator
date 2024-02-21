@@ -1,15 +1,45 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void main(String[] args){
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        int n1,n2,select;           // describe data
+
+        Scanner input = new Scanner(System.in);         //  create a scanner
+        System.out.println("Enter the first number : ");        // ask first number
+        n1 =input.nextInt();                                    // save firstnumber
+        System.out.println("Enter the second number: ");        //ask second number
+        n2 = input.nextInt();                                   //save second number
+
+        System.out.println("Select transaction :");             //
+        System.out.println("1-Sum\n2-Subtraction\n3-Divide\n4-Multiplication"); //ask which operation is required
+        select = input.nextInt();                   // save the chosen operation
+
+        switch (select){
+            case 1:                 // describe case 1 Sum op.
+                System.out.println("Result : " + (n1+n2));  // write result
+                System.out.println("End of Calculator Program");
+                break;              // if chosen is not case 1 ,break and look others
+            case 2:
+                System.out.println("Result : "+ (n1-n2));
+                System.out.println("End of Calculator Program");
+                break;
+            case 3 :
+                if (n2 !=0) {
+                    System.out.println("Result : " + (n1 / n2));
+                    System.out.println("End of Calculator Program");
+                }
+                else  {
+                    System.out.println("Nubmer cannot be divided by zero");
+                }
+                     {
+                System.out.println("Operatipon rejected");
+            }   break;
+
+            case 4 :
+                System.out.println("Result : "+ (n1*n2));
+                System.out.println("End of Calculator Program");
+                break;
+
         }
     }
-}
+}     // Ali Eren KÖSE 21/02/2024  17:54      Acımasızca geçip giden zamandan ,geriye kalan sadece yalnızlıklarımız.
